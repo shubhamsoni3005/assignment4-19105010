@@ -90,9 +90,7 @@ class Number{
 
     void listFactor(){
         for (int i = 1; i <= num; ++i) {
-
-            // if number is divided by i
-            // i is the factor
+            // if number is divided by i, i is the factor
             if (num % i == 0) {
                 System.out.print(i + " ");
             }
@@ -105,14 +103,12 @@ class Number{
         int number = (int) num;
         // Number Should be positive
         while (number > 0) {
-            // Pushing numbers inside stack that
-            // are divisible by 2
+            // Pushing numbers inside stack that are divisible by 2
             st.push(number % 2);
             // Dividing number by 2
             number = number / 2;
         }
 
-        // Checking condition whether stack is empty
         while (!(st.isEmpty())) {
             System.out.print(st.pop());
         }
